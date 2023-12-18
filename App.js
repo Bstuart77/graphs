@@ -63,57 +63,12 @@ const MyLineChart = () => {
   );
 };
 
-const MyPiChart = () => {
-  return (<>
-    <PieChart
-      data={[
-        {
-          name: 'Angry',
-          population: 5,
-          color: '#FF7171',
-        },
-        {
-          name: 'Sad',
-          population: 18,
-          color: 'lightblue'
-        },
-        {
-          name: 'Meh',
-          population: 5,
-          color: 'yellow'
-        },
-        {
-          name: 'Happy',
-          population: 2,
-          color: 'lightgreen'
-        },
-        {
-          name: 'Excited',
-          population: 1,
-          color: 'gold'
-        }]}
-
-        width={Dimensions.get('window').width}
-        height={200}
-        chartConfig={{
-            color: (opacity = 3) => `rgba(255, 255, 255, ${opacity})`
-        }}
-        accessor="population"
-        backgroundColor="transparent"
-        paddingLeft="15"
-        absolute
-        />
-  </>
-  );
-};
-
 const App = () => {
   return (
 
     <View style={styles.container}>
       <View>
         <MyLineChart />
-        <MyPiChart />
       </View>
     </View>
   );
